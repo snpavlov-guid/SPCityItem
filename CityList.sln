@@ -14,6 +14,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{A0B5654B-FBE2-4386-BAD5-8E015FD0E923}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
+		Documents\spcitylist01.PNG = Documents\spcitylist01.PNG
+		Documents\spcitylist02.PNG = Documents\spcitylist02.PNG
+		Documents\spcitylist03.PNG = Documents\spcitylist03.PNG
+		Documents\spcitylist04.PNG = Documents\spcitylist04.PNG
+		Documents\spcitylist05.PNG = Documents\spcitylist05.PNG
 	EndProjectSection
 EndProject
 Global
