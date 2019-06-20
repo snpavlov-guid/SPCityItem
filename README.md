@@ -13,9 +13,14 @@ is saved in to  CityDocuments library. CityItem contains link to weather csv.
 Several tests provided to check structure of csv file.
 
 # Demo
+                               
+![Pciture 1](Documents/spcitylist01.PNG)
 
-|:-:                                     |:-:                                     |
-|![Pciture 1](Documents/spcitylist01.PNG)|![Pciture 2](Documents/spcitylist02.PNG)|
-|![Pciture 3](Documents/spcitylist03.PNG)|![Pciture 4](Documents/spcitylist04.PNG)|
-|![Pciture 5](Documents/spcitylist05.PNG)|
+![Pciture 2](Documents/spcitylist02.PNG)
+
+![Pciture 3](Documents/spcitylist03.PNG)
+
+![Pciture 4](Documents/spcitylist04.PNG)
+
+![Pciture 5](Documents/spcitylist05.PNG)
 
