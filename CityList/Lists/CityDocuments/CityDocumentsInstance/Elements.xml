@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance 
+    Title="CityDocuments" 
+    OnQuickLaunch="FALSE" 
+    TemplateType="10101" 
+    Url="CityDocuments" 
+    VersioningEnabled="TRUE" 
+    Description="City information documents">
+  </ListInstance>
+</Elements>

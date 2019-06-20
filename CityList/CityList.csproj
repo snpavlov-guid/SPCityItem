@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F2E5636C-E837-449C-BE89-3874BD91F4D5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CityList</RootNamespace>
+    <AssemblyName>CityList</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\CityItemWorker.cs" />
+    <Compile Include="Code\Constants.cs" />
+    <Compile Include="Code\Utilities.cs" />
+    <Compile Include="EventReceivers\CityItemEventReceivers\CityItemEventReceivers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ContentTypes\CityDoc\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b1ff9718-9d3a-4f8c-8923-9b53504781c4}</SharePointProjectItemId>
+    </None>
+    <None Include="EventReceivers\CityItemEventReceivers\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{72f01490-2281-44e5-99db-e0835cf2fc8e}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\CityDocuments\CityDocumentsInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{01db6b41-f659-42e1-8974-176e472d5a09}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\CityDocuments\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1bb3d530-0e7e-4e5c-8cea-ff7824eca7b5}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\CityItems\CityItemsInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5801720c-31d5-4fef-be0c-3495a2dcb126}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\CityItems\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{92253715-1e6f-4f57-91d5-d01de640adba}</SharePointProjectItemId>
+    </None>
+    <None Include="SiteColumns\CityColumns\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0885f463-77c8-4d2e-a6ac-887e9b181d16}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\CityItem\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f936f26b-2de9-4dc8-bbe1-03e7b4c72942}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\CityListFeature\CityListFeature.feature">
+      <FeatureId>{00c53870-1fdd-4c9b-84ad-57a5acebc315}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{d6396bb3-75ee-4b91-89a5-1196be62e917}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CityServiceClient\CityServiceClient.csproj">
+      <Project>{5a8f3ca4-9068-4960-a74a-9c8f9ed69887}</Project>
+      <Name>CityServiceClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ContentTypes\CityDoc\Elements.xml" />
+    <Content Include="EventReceivers\CityItemEventReceivers\Elements.xml" />
+    <Content Include="Lists\CityDocuments\CityDocumentsInstance\Elements.xml" />
+    <Content Include="Lists\CityDocuments\EditDlg.htm" />
+    <Content Include="Lists\CityDocuments\Elements.xml" />
+    <Content Include="Lists\CityDocuments\FileDlg.htm" />
+    <Content Include="Lists\CityDocuments\Repair.aspx" />
+    <Content Include="Lists\CityDocuments\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Lists\CityDocuments\Upload.aspx" />
+    <Content Include="Lists\CityItems\CityItemsInstance\Elements.xml" />
+    <Content Include="Lists\CityItems\Elements.xml" />
+    <Content Include="Lists\CityItems\Schema.xml" />
+    <Content Include="SiteColumns\CityColumns\Elements.xml" />
+    <Content Include="ContentTypes\CityItem\Elements.xml" />
+    <Content Include="Features\CityListFeature\CityListFeature.Template.xml">
+      <DependentUpon>CityListFeature.feature</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

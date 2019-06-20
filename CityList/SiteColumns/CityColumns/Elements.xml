@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  
+  <Field
+     ID="{20E6BE76-2B1C-4A76-8E63-FEADDCAD0503}"
+     Name="Latitude"
+     DisplayName="Latitude"
+     Type="Number"
+     Decimals="8"
+     Min="-90"
+     Max="90"
+     Required="TRUE"
+     Group="City List Columns">
+     <Default>0</Default>
+  </Field>
+
+  <Field
+   ID="{A2D02728-1E70-40C3-8E9F-CB2CE681E957}"
+   Name="Longitude"
+   DisplayName="Longitude"
+   Type="Number"
+   Decimals="8"
+   Min="-180"
+   Max="180"
+   Required="TRUE"
+   Group="City List Columns">
+   <Default>0</Default>
+  </Field>
+
+  <Field
+    ID="{8E3AFBB3-FC11-4B16-8AE9-E95A0A3CEAE6}"
+    Name="DocumentRef"
+    DisplayName="Document Reference"
+    Type="URL"
+    Required="FALSE"
+    Format="Hyperlink"
+    Group="City List Columns">
+  </Field>
+
+
+  
+
+
+</Elements>

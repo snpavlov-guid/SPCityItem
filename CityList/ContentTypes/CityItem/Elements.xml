@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100E4CC0D022B7B4E2F950A465AF0524579" Name="CityItem" Group="CityList Content Types" Description="City item Content Type" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" DisplayName="Name" Required="TRUE" Name="Title" />
+      <FieldRef ID="{20E6BE76-2B1C-4A76-8E63-FEADDCAD0503}" DisplayName="Latitude" Required="TRUE" Name="Latitude" />
+      <FieldRef ID="{A2D02728-1E70-40C3-8E9F-CB2CE681E957}" DisplayName="Longitude" Required="TRUE" Name="Longitude" />
+      <FieldRef ID="{8E3AFBB3-FC11-4B16-8AE9-E95A0A3CEAE6}" DisplayName="Document Reference" Required="FALSE" Name="DocumentRef" Format="Hyperlink" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

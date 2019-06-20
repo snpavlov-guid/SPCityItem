@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="d6396bb3-75ee-4b91-89a5-1196be62e917" solutionId="d6396bb3-75ee-4b91-89a5-1196be62e917" resetWebServer="false" sharePointProductVersion="15.0" name="CityList" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="CityServiceClient.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\CityServiceClient\CityServiceClient.csproj" />
+  </assemblies>
+  <features>
+    <featureReference itemId="00c53870-1fdd-4c9b-84ad-57a5acebc315" />
+  </features>
+</package>

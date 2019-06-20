@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="CityItems" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/CityItems" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    
+      
+    <ContentTypeRef ID="0x0120" /><ContentType ID="0x0100E4CC0D022B7B4E2F950A465AF0524579" Name="CityItem" Group="CityList Content Types" Description="City item Content Type" Inherits="TRUE" Version="0">
+        <FieldRefs>
+          
+          
+          
+          
+        <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" DisplayName="Name" Required="TRUE" Name="Title" />
+          <FieldRef ID="{20E6BE76-2B1C-4A76-8E63-FEADDCAD0503}" DisplayName="Latitude" Required="TRUE" Name="Latitude" />
+          <FieldRef ID="{A2D02728-1E70-40C3-8E9F-CB2CE681E957}" DisplayName="Longitude" Required="TRUE" Name="Longitude" />
+          <FieldRef ID="{8E3AFBB3-FC11-4B16-8AE9-E95A0A3CEAE6}" DisplayName="Document Reference" Required="FALSE" Name="DocumentRef" Format="Hyperlink" ShowInNewForm="FALSE" ShowInEditForm="FALSE" /></FieldRefs>
+      </ContentType></ContentTypes>
+    <Fields>
+      
+      
+      
+      
+      
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="Name" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" />
+      <Field ID="{28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f}" Type="DateTime" Name="Modified" DisplayName="$Resources:core,Modified;" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3"  StaticName="Modified" FriendlyDisplayFormat="Disabled" />
+      <Field ID="{20E6BE76-2B1C-4A76-8E63-FEADDCAD0503}" Name="Latitude" DisplayName="Latitude" Type="Number" Decimals="8" Min="-90" Max="90" Required="TRUE" Group="City List Columns"><Default>0</Default></Field>
+      <Field ID="{A2D02728-1E70-40C3-8E9F-CB2CE681E957}" Name="Longitude" DisplayName="Longitude" Type="Number" Decimals="8" Min="-180" Max="180" Required="TRUE" Group="City List Columns"><Default>0</Default></Field>
+      <Field ID="{8E3AFBB3-FC11-4B16-8AE9-E95A0A3CEAE6}" Name="DocumentRef" DisplayName="Document Reference" Type="URL" Required="FALSE" Group="City List Columns" Format="Hyperlink" ShowInNewForm="FALSE" ShowInEditForm="FALSE"></Field>
+    </Fields>
+    <Views>
+      
+      
+    
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">50</RowLimit>
+        <ViewFields>
+
+          
+          
+          
+          
+          
+          
+        <FieldRef Name="LinkTitle" />
+          <FieldRef Name="Latitude" />
+          <FieldRef Name="Longitude" />
+          <FieldRef Name="DocumentRef" />
+          <FieldRef Name="Modified" />
+          <FieldRef Name="Editor" />
+         
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>
