@@ -22,5 +22,32 @@ namespace CityServiceClient.Common
         }
 
         #endregion
+
+        #region Exceptions
+
+        public static string GetAggregatedExceptionMessage(this Exception ex)
+        {
+            var message = ex.Message;
+
+            if (!(ex is AggregateException))
+            {
+                return message;
+            }
+
+            var sb = new StringBuilder();
+
+            var agex = ((AggregateException)ex).Flatten();
+
+            foreach (var e in agex.InnerExceptions)
+            {
+                sb.AppendLine(e.Message);
+            }
+
+            message = sb.ToString();
+
+            return message;
+        }
+
+        #endregion
     }
 }

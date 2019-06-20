@@ -64,7 +64,7 @@ namespace CityList.Code
             }
             catch (Exception e)
             {
-                result.Message = e.Message;
+                result.Message = e.GetAggregatedExceptionMessage();
             }
 
             return result;
